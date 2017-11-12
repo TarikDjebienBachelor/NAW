@@ -1,0 +1,65 @@
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.IOException;
+
+/**
+* Une classe qui permet de lire des chaines de caractere, des entiers et des reels partir du
+* clavier. Le code est assez simple et ainsicomprendre.
+*/
+
+public class LectureClavier{ 
+	private BufferedReader reader;
+
+		/** Construit un outil pour lire des valeurs a partir du clavier en utilisant un inputStream. Une
+		* fois l'instance creee, on peut l'utiliser pour lire des entrres a partir du clavier.
+		**/
+	
+	  public LectureClavier(){  
+		  reader = new BufferedReader(new InputStreamReader(System.in));  
+	  }
+	
+	  /**
+	   * Lis une entree et la convertit en entier (int). L'entree ne doit contenir que l'entier (pas
+	   * d'espace ou autre caractere).
+	   * @return l'entier que l'utilisateur a tape
+	   */
+	
+	  public int lectureInt()
+	  {  String inputString = lectureString();
+	     int n = Integer.parseInt(inputString);
+	     return n;
+	   }
+	
+	  /**
+	   * Lis une entree et la convertit en reel  (double). L'entree ne doit contenir que l'entier (pas
+	   * d'espace ou autre caractere).
+	   * @return le reel que l'utilisateur a tape.
+	   */
+	
+	  public double lectureDouble()
+	   {  String inputString = lectureString();
+	      double x = Double.parseDouble(inputString);
+	      return x;
+	   }
+	
+	  /**
+	   * Lis une ligne entree au clavier. S'il y a une exception d'entree (IOException), le programme
+	   * s'arrete.
+	   * @return l'entree de l'utilisateur ou null a la fin de l'entree
+	   */
+	
+	  public String lectureString()
+	   {  String inputLine = "";
+	      try
+	      {  inputLine = reader.readLine();
+	      }
+	      catch(IOException e)
+	      {  System.out.println(e);
+	         System.exit(1);
+	      }
+	      return inputLine;
+	   }
+	
+}
+

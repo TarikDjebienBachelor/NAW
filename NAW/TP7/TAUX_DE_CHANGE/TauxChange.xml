@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<tauxChangeEuro>
+	<device nom="Dollar Américain" valeur="1.4011"/>
+	<device nom="Yen Japonais" valeur="115.0193"/>
+	<device nom="Livre Sterling" valeur="0.8613"/>
+	<device nom="Franc Suisse" valeur="1.2927"/>
+	<device nom="Dinar Algérien" valeur="100.6935"/>
+	<device nom="Real Brésilien" valeur="2.3183"/>
+	<device nom="Roupie Indienne" valeur="63.1524"/>
+	<device nom="Rouble Russe" valeur="39.4851"/>
+	<device nom="Shekel Isrraélien" valeur="5.0423"/>
+	<device nom="Couronne Norvégienne" valeur="7.76"/>
+	<device nom="Dollar Canadien" valeur="1.3601"/>
+	<device nom="Lire Turcque" valeur="2.2417"/>
+</tauxChangeEuro>

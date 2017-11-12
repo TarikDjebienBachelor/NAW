@@ -1,0 +1,46 @@
+/**
+ * 
+ */
+
+/**
+ * @author rsitrakaeric
+ *
+ */
+public class MyElementsDtd implements ElementsDTD {
+
+	/* (non-Javadoc)
+	 * @see ElementsDTD#addElement(java.lang.String)
+	 */
+	@Override
+	public void addElement(String tag) {
+		// TODO Auto-generated method stub
+
+	}
+
+	/* (non-Javadoc)
+	 * @see ElementsDTD#addIdAttr(java.lang.String, java.lang.String)
+	 */
+	@Override
+	public void addIdAttr(String tag, String attName) {
+		// TODO Auto-generated method stub
+
+	}
+
+	/* (non-Javadoc)
+	 * @see ElementsDTD#addIdRefAtt(java.lang.String, java.lang.String)
+	 */
+	@Override
+	public void addIdRefAtt(String tag, String attName) {
+		// TODO Auto-generated method stub
+
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

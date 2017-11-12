@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>les premiers</title>
+		<script language="javascript" type="text/javascript">
+		idMax = 3;
+		symbol = new Array(idMax); 
+		i=0; 
+		
+		    symbol[i] = "triangle";
+		    i++; 
+		
+		    symbol[i] = "carre";
+		    i++; 
+		
+		    symbol[i] = "rond";
+		    i++; 
+		
+		function diag(maxtag){    
+			
+				if (maxtag=="triangle") {
+					 document.getElementById("r").innerHTML=  "travailleur acharné" ;
+				 } 
+			
+				if (maxtag=="carre") {
+					 document.getElementById("r").innerHTML=  "travailleur moyen" ;
+				 } 
+			
+				if (maxtag=="rond") {
+					 document.getElementById("r").innerHTML=  "cancre" ;
+				 } 
+			 
+		} 
+
+		
+		function giveDiagnostic(){ 
+			 var coches = 0; var msg =""; 
+			 var liste =document.getElementsByTagName("catalogue") ;
+alert(liste.length);
+		}
+		
+		</script>
+	</head>
+	<body><u><center>
+				<h2 style="color:#ff8800;">Rentrée scolaire</h2>
+			</center>
+		</u><center>
+			<h3 style="color:#0000FF;">Mieux vaut avoir des bonnes cartes en main pour réussir sa rentrée scolaire </h3>
+		</center><u><h4 style="color:#191970;">devoirs de vacances</h4>
+		</u><p><input type="checkbox">tu les as faits régulierment</p>
+		<p><input type="checkbox">tu as travaillé un peu de temps en temps</p>
+		<p><input type="checkbox">tu n''as revu aucun cours</p><u><h4 style="color:#191970;">cette année, tu espères</h4>
+		</u><p><input type="checkbox">être dans une classe sympa</p>
+		<p><input type="checkbox">bien travailler</p>
+		<p><input type="checkbox">avoir de bons profs</p><u><h4 style="color:#191970;">ta devise</h4>
+		</u><p><input type="checkbox">plus on est de fous, plus on s'amuse</p>
+		<p><input type="checkbox">quand on veut, on peut</p>
+		<p><input type="checkbox">rien ne sert de courir, il faut partir à point</p>
+	</body>
+	<div id="r"></div><input type="submit" value="Valider le questionnaire" onclick="giveDiagnostic()"></html>

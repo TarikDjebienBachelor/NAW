@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT CDTHEQUE (CD*)>
+<!ELEMENT CD (interprete, titreA, annee, editeur, chanson*)> 
+<!ELEMENT annee (#PCDATA)>
+<!ELEMENT interprete (#PCDATA)>
+<!ELEMENT titreA (#PCDATA)>
+<!ELEMENT editeur (#PCDATA)>
+<!ELEMENT chanson (titreC, auteur*, compositeur*)>
+<!ATTLIST chanson duree CDATA #IMPLIED> 
+<!ATTLIST chanson enregistrement (studio|live) #IMPLIED> 
+<!ATTLIST chanson annee CDATA #IMPLIED>
+<!ELEMENT auteur (#PCDATA)> 
+<!ELEMENT compositeur (#PCDATA)>
+<!ELEMENT titreC (#PCDATA)>

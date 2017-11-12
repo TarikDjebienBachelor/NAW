@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE formules SYSTEM "expressionsDtd.dtd">
+<formules>
+	<constantes>
+		<const valeur="3" nom="X"/>
+		<const valeur="78" nom="Y"/>
+		<const valeur="45" nom="Z"/>
+	</constantes>
+	<exps>
+		<exp nom="R1">
+			<op symbole="+">
+				<var nom="X"/>
+				<var nom="Z"/>
+			</op>
+		</exp>
+		<exp nom="R2">
+			<op symbole="+">
+				<op symbole="*">
+					<var nom="X"/>
+					<var nom="X"/>
+				</op>
+				<op symbole="*">
+					<var nom="Y"/>
+					<var nom="Y"/>
+				</op>
+			</op>
+		</exp>
+	</exps>
+</formules>

@@ -1,0 +1,62 @@
+import java.util.ArrayList;
+import java.util.Map;
+
+/**
+ * @author rakotobe
+ *
+ */
+
+
+public class MyElementsDtd implements ElementsDTD {
+
+	//les balises sera une map avec comme clé le nom de la balise, et comme valeur la liste de ses attributs 
+	private Map<String,ArrayList<String>> lesBalises ;
+	
+	
+	/** Ajoute un element porteur d'attribut ID ou IDREF
+	 * @param tag
+	 */
+	public void addElement(String tag) {
+		this.lesBalises.put(tag, new ArrayList<String>());
+	}
+
+	
+	
+	
+	/**	Associe l'attribut attName a l'element tag avec lestatut d'ID
+	 * @param tag
+	 * @param attName
+	 */
+	public void addIdAttr(String tag, String attName) {
+		// TODO Auto-generated method stub
+
+	}
+
+	
+	
+	
+	/**Associe l'attribut attName a l'element tag avec le statut IDREF
+	 * @param tag
+	 * @param attName
+	 */
+	public void addIdRefAtt(String tag, String attName) {
+		// TODO Auto-generated method stub
+
+	}
+
+	
+	
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		ElementsDTD e = new MyElementsDtd();
+		e.addElement("personne");
+		e.addElement("voiture");
+		e.addIdAttr("personne","idpers");
+		e.addIdAttr("voiture","immatriculation");
+		e.addIdRefAtt("voiture", "idprop") ;
+	}
+
+}

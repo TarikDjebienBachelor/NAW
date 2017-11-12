@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT mesTests (testDePersonnalite)+>
+
+<!ELEMENT testDePersonnalite (titre,accroche,questionnaire,interpretations)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT accroche (#PCDATA) >
+<!ELEMENT questionnaire (questions+) >
+<!ELEMENT questions (intituleQuestion,reponses+) >
+<!ELEMENT interpretations (interpretation)+>
+<!ELEMENT intituleQuestion (#PCDATA) >
+<!ELEMENT reponses (#PCDATA) >
+<!ELEMENT interpretation (#PCDATA) >
+
+<!ATTLIST questions id CDATA #REQUIRED >
+<!ATTLIST reponses  id CDATA #REQUIRED symboleIndicateur CDATA #REQUIRED >
+<!ATTLIST interpretation id CDATA #REQUIRED >

@@ -1,0 +1,139 @@
+  <head>
+  <title>Taquin</title>
+
+
+ <script type="text/javascript"> 
+    <!-- 
+
+    indVide = new Array(0,0);
+    tabGagne = new Array();
+    tabConfig = new Array();
+    i = 0; j = 0;
+
+
+    while (i < 3) {
+    k = 0;
+    tabGagne[i] = new Array();
+    tabConfig[i] = new Array();
+      while (k < 3){
+	tabGagne[i][k] = j;
+	tabConfig[i][k] = j;
+	j++;
+	k++;
+      }
+      i++;
+    }
+
+
+
+    function melange(x,y){
+      tabTemp = creaTableTemp(x*y);
+      i = 0;
+      j = 0;
+      while (tabTemp.length > 0){
+	alea = parseInt(Math.random()*(tabTemp.length));
+	tabConfig[i][j] = tabTemp[alea];
+	if (tabTemp[alea] == 0) 
+	  indVide = new Array(i,j);
+	tabTemp = enleveElement(tabTemp,alea);
+	if (i < x-1)
+	  i++;
+	else{
+	  if (j < y-1) 
+	    j++;
+	  else 
+	    j = 0;
+	  i = 0;
+	}
+      }
+      dessineTaquin(x,y);
+    }
+
+
+    function creaTableTemp(x) {
+      tmpArray = new Array()
+      i = 0;
+      while (i < x){
+	tmpArray[i] = i;
+	i++;
+      }
+      return tmpArray;
+    }
+
+
+
+    function enleveElement(tab,el){
+      return tab.slice(0,el).concat(tab.slice(el+1));
+    }
+
+
+
+    function dessineTaquin(x,y){
+      i = 0;
+      while (i < x){
+	j = 0;
+	while (j < y){
+	  changeImage("case"+i+j,"images/image"+tabConfig[i][j]+".gif");
+	  j++;
+	}
+	i++;
+      }
+    }
+
+
+
+
+    function testMouvement(x,y){
+      if (estVoisin(x,y)){
+	changePos(x,y);
+	tabConfig[indVide[0]][indVide[1]] = tabConfig[x][y];
+	tabConfig[x][y] = 0;
+	indVide[0] = x;
+	indVide[1] = y;
+	if (verifTable(tabConfig,tabGagne)) 
+	  gagne();
+      }
+    }
+
+
+
+
+    function estVoisin(x,y){
+      if ((Math.abs(indVide[0]-x) == 1) && (indVide[1] == y))
+	return true;
+      if ((Math.abs(indVide[1]-y) == 1) && (indVide[0] == x)) 
+	return true;
+      return false;
+    }
+
+
+
+    function changePos(x,y){
+      changeImage("case"+indVide[0]+indVide[1],document.images["case"+x+y].src);
+      changeImage("case"+x+y,"images/image0.gif");
+    }
+
+
+
+    function verifTable(tab1,tab2){
+      i = 0;
+      while (i < tab1.length){
+      j = 0;
+	while (j < tab1[i].length){
+	  if (tab1[i][j] != tab2[i][j]) 
+	    return false;
+	  j++;
+	}
+	i++;
+      }
+      return true;
+    }
+
+
+
+    function gagne(){
+      window.alert("Bravo !");
+    } 
+    -->
+    </script>
+  </head>

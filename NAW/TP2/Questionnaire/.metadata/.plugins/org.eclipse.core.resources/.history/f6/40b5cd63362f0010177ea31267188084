@@ -1,0 +1,59 @@
+import java.awt.GridLayout;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import java.io.*;
+import java.util.*;
+import javax.xml.parsers.*;
+import org.w3c.dom.*;
+
+
+/**
+ * Représente un panneau destiné à contenir une question, accompagné d'un champ de saisie de réponse.
+ * @author rakotobe
+ */
+
+public class QuestionPanel {
+	
+	private JPanel panel;
+	private JLabel enonce;
+	// Gestionnaires de placements. Je les met en statique afin de ne pas multiplier les instances.
+	private static final GridLayout TROIS_LIGNES = new GridLayout(3,1);
+	
+	
+
+	
+	/** Construit le QuestionPanel correspondant à la question passée en paramètre
+	 * @param question contiendra intituleQuestion et les reponses 
+	 */
+	public QuestionPanel(Element question) {
+		// Initialisation des attributs
+		this.enonce = new JLabel(question.getFirstChild().getTextContent());
+		
+		//this.reponsepanel = question.getReponse().getMyReponsePanel();
+		this.panel = new JPanel(QuestionPanel.TROIS_LIGNES);
+		
+		// Construction du Panel
+		this.panel.add(this.enonce);
+		//this.panel.add(this.reponsepanel.getPanel());
+		
+		// Application du style
+		this.enonce.setBorder(Style.MARGES_INTERNES);
+		this.enonce.setForeground(Style.COULEUR_QUESTION);
+		this.enonce.setFont(Style.PETITE_POLICE);
+		this.panel.setBackground(Style.FOND_QUESTION);
+		this.panel.setBorder(Style.BORDURE_FINE);
+	}
+	
+
+	
+	
+	
+	/**
+	 * Renvoie le JPanel associé au QuestionPanel.
+	 * @return Le JPanel associé au QuestionPanel.
+	 */
+	public JPanel getPanel() {
+		return panel;
+	}
+
+}

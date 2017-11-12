@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<recette>
+<nom>Tiramisu</nom>
+<portion>6/8</portion>
+<preparation value="35" unit="min"/>
+<cuisson value="0" unit="min"/>
+<repos value="12" unit="h"/>

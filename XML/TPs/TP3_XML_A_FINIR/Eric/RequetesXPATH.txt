@@ -1,0 +1,36 @@
+1) //replique[role/text()="RAGUENEAU"]/texte
+
+2) //role/text()
+   //personnages/text
+
+3) //replique[role/text()="LE CUISINIER"]/following-sibling::replique[1]/role
+
+4) //replique[attitude]
+
+5) //replique[position()=last()]
+
+
+___________________________________________________________________________________________________________________
+
+
+
+1) videotheque/categorie/film/acteur[@nom="Depardieu"]/@prenom
+
+2) //film[@duree<"120"]/titre
+
+3) //categorie[@nom="Comédie"]/film/titre
+
+4) //categorie[@nom="Comédie"]/film[acteur[@nom="Depardieu"]]/titre
+
+5) videotheque/categorie/film [acteur/@nom = "Tautou"]   [acteur/@nom = "Kassovitz"]  /titre
+
+6) //categorie[film/realisateur/@nom = "Spielberg"]
+
+7) //film[count(acteur)>=3]
+
+8) //categorie[count(film)=0]
+
+9) //film[@annee="2004"][acteur/@nom="Pitt"][acteur/@prenom="Brad"]/titre
+
+
+___________________________________________________________________________________________________________________

@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502387665
+opened,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1296502389399
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1296502389711
+activated,view,org.eclipse.ui.navigator.resources,3.4.0.I20090525-2000,"org.eclipse.ui.navigator.ProjectExplorer",1296502392133
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1296502393414
+activated,view,org.eclipse.ui.navigator.resources,3.4.0.I20090525-2000,"org.eclipse.ui.navigator.ProjectExplorer",1296502394133
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1296502394367
+activated,view,org.eclipse.ui.navigator.resources,3.4.0.I20090525-2000,"org.eclipse.ui.navigator.ProjectExplorer",1296502395196
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1296502395446
+activated,view,org.eclipse.ui.navigator.resources,3.4.0.I20090525-2000,"org.eclipse.ui.navigator.ProjectExplorer",1296502396024
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1296502396242
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502397570
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502404226
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.selectAll",1296502405289
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.paste",1296502405711
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502412366
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502419085
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1296502419100
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502426616
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502428428
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1296502428444
+activated,view,org.eclipse.ui.navigator.resources,3.4.0.I20090525-2000,"org.eclipse.ui.navigator.ProjectExplorer",1296502432990
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502434146
+error,log,,,"Internal Error",1296502438865
+error,log,,,"Some characters cannot be mapped using ""Cp1252"" character encoding.\nEither change the encoding or remove the characters which are not supported by the ""Cp1252"" character encoding.",1296502439787

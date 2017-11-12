@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 sp1 (http://www.altova.com) by Delepeleire (Université des Sciences et Technologies de Lille) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Villes">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Ville">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Habitations">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Type">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:enumeration value="individuel"/>
+													<xs:enumeration value="collectif"/>
+													<xs:enumeration value="commerce"/>
+													<xs:enumeration value="entreprise"/>
+													<xs:enumeration value="batimentPublic"/>
+													<xs:enumeration value="nuePropriete"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="numeroHabitation" type="xs:positiveInteger"/>
+										<xs:element name="rue" type="xs:string"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Bureaux_De_Votes" type="xs:anySimpleType"/>
+							<xs:element name="Habitants">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="nom" type="xs:string"/>
+										<xs:element name="prenom" type="xs:string"/>
+										<xs:element name="dateDeNaissance"/>
+										<xs:element name="id_habitant"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

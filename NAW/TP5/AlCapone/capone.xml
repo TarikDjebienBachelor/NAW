@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<personne>
+	<nom>Capone</nom>
+	<prenom>Al</prenom>
+	<personne>
+		<nom>Capone</nom>
+		<prenom>Ralph</prenom>
+		<personne>
+			<nom>Svoboda</nom>
+			<prenom>Steve</prenom>
+		</personne>
+	</personne>
+	<personne>
+		<nom>Colosimo</nom>
+		<prenom>Jim</prenom>
+		<personne>
+			<nom>Joe</nom>
+			<prenom>Scalise</prenom>
+			<personne>
+				<nom>Anselmi</nom>
+				<prenom>Albert</prenom>
+			</personne>
+		</personne>
+	</personne>
+</personne>

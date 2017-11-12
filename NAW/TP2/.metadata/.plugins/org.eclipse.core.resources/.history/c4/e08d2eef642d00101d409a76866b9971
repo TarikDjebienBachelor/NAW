@@ -1,0 +1,51 @@
+/**
+ * @author rakotobe
+ *
+ */
+
+import java.io.File;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+
+
+public class Expressions {
+
+	public static void main(String[] args) throws Exception {  
+		  
+		  DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); 
+		  dbf.setIgnoringElementContentWhitespace(true); 
+		  DocumentBuilder db = dbf.newDocumentBuilder();
+		  Document document = db.parse(new File("E:/NAW/TP2/expressionsXml.xml")); 
+		  
+		  Element rac = document.getDocumentElement();
+		  
+
+		  
+
+		  
+		  
+		    XMLTools.ecrireXML(document,"E:/expressionsModifie.xml",null);
+	  }
+	  
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

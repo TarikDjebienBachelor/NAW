@@ -1,0 +1,16 @@
+import java.util.HashMap;
+
+/**
+ * 
+ */
+
+/**
+ * @author rsitrakaeric
+ *
+ */
+public class QuestionReponse {
+
+	private String intituleQuestions ; 	
+	// une question contient un libelle , et des reponses = identifiant + libelle reponse
+	private HashMap<Integer,String> questionsReponses = new HashMap<String, Reponses>() ; 
+}

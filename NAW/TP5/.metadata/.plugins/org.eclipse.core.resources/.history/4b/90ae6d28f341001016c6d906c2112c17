@@ -1,0 +1,41 @@
+/**
+ * 
+ */
+
+/**
+ * @author rsitrakaeric
+ *
+ */
+public class MyElementsDtd implements ElementsDTD {
+
+
+	public void addElement(String tag) {
+		// TODO Auto-generated method stub
+
+	}
+
+
+	public void addIdAttr(String tag, String attName) {
+		// TODO Auto-generated method stub
+
+	}
+
+
+	public void addIdRefAtt(String tag, String attName) {
+		// TODO Auto-generated method stub
+
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		ElementsDTD e = new ElementsDTD();
+		e.addElement("personne");
+		e.addElement("voiture");
+		e.addIdAttr("personne","idpers");
+		e.addIdAttr("voiture","immatriculation");
+		e.addIdRefAttr("voiture", "idprop") ;
+	}
+
+}

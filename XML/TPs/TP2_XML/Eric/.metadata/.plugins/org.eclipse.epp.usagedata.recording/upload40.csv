@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502439818
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.delete",1296502439834
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502444521
+error,log,,,"Internal Error",1296502449005
+error,log,,,"Some characters cannot be mapped using ""Cp1252"" character encoding.\nEither change the encoding or remove the characters which are not supported by the ""Cp1252"" character encoding.",1296502449521
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502451989
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.delete",1296502451989
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1296502452864
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502454130
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502456302
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1296502456333
+activated,view,org.eclipse.ui.navigator.resources,3.4.0.I20090525-2000,"org.eclipse.ui.navigator.ProjectExplorer",1296502460739
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502463676
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502469504
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.refresh",1296502470613
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502470910
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502471426
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.refresh",1296502472816
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502473082
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502474535
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502475926
+error,log,,,"WARNING: Blocked recursive attempt to close part org.eclipse.jdt.ui.CompilationUnitEditor while still in the middle of activating it",1296502476410
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1296502479316
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1296502479332
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1296502479363

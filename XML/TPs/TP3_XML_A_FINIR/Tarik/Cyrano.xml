@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE scene [
+	<!ELEMENT scene (personnages, ouverture, replique*)>
+	<!ELEMENT personnages (#PCDATA)>
+	<!ELEMENT ouverture (#PCDATA)>
+	<!ELEMENT replique (role, (attitude?, texte?)*)>
+	<!ELEMENT role (#PCDATA)>
+	<!ELEMENT texte (#PCDATA)>
+	<!ELEMENT attitude (#PCDATA)>
+	<!ATTLIST scene
+	numero CDATA #REQUIRED
+		acte CDATA #REQUIRED
+>
+]>
+<scene numero="1" acte="II">
+	<personnages>RAGUENEAU, PATISSIER, puis LISE.</personnages>
+	<ouverture>
+	Ragueneau, à la petite table, écrivant d'un air
+		inspiré,
+		et comptant sur ses doigts.
+    </ouverture>
+	<replique>
+		<role>PREMIER PATISSIER</role>
+		<attitude> apportant une pièce montée</attitude>
+		<texte>en nougat ! </texte>
+	</replique>
+	<replique>
+		<role>DEUXIEME PATISSIER</role>
+		<attitude>apportant un plat</attitude>
+		<texte>Flan !	</texte>
+	</replique>
+	<replique>
+		<role>TROISIEME PATISSIER</role>
+		<attitude> apportant un rôti paré de plumes</attitude>
+		<texte>Paon !</texte>
+	</replique>
+	<replique>
+		<role>QUATRIEME PATISSIER</role>
+		<attitude>apportant une plaque de gâteaux</attitude>
+		<texte>Roinsoles !</texte>
+	</replique>
+	<replique>
+		<role>CINQUIEME PATISSIER</role>
+		<attitude>apportant une sorte de terrine</attitude>
+		<texte>Boeuf en daube !</texte>
+	</replique>
+	<replique>
+		<role>RAGUENEAU</role>
+		<attitude>cessant d'écrire et levant la tête</attitude>
+		<texte>Sur les cuivres, déjà, glisse l'argent de l'aube !
+			Etouffe en
+			toi le dieu qui chante, Ragueneau !
+			L'heure du luth viendra, -c'est
+			l'heure du fourneau !</texte>
+		<attitude>Il se lève. -A un cuisinier.</attitude>
+		<texte>Vous, veuillez m'allonger cette sauce, elle est courte !
+		</texte>
+	</replique>
+	<replique>
+		<role>LE CUISINIER</role>
+		<texte>De combien ?</texte>
+	</replique>
+	<replique>
+		<role>RAGUENEAU</role>
+		<texte>De trois pieds.</texte>
+		<attitude>Il passe.</attitude>
+	</replique>
+	<replique>
+		<role>LE CUISINIER</role>
+		<texte>Hein !</texte>
+	</replique>
+	<replique>
+		<role>PREMIER PATISSIER</role>
+		<texte>La tarte !</texte>
+	</replique>
+	<replique>
+		<role>DEUXIEME PATISSIER</role>
+		<texte>La tourte !</texte>
+	</replique>
+	<replique>
+		<role>RAGUENEAU</role>
+		<attitude>devant la cheminée</attitude>
+		<texte>Ma Muse, éloigne-toi, pour que tes yeux charmants
+			N'aillent
+			pas se rougir au feu de ces sarments !
+			A un pâtissier, lui montrant
+			des pains.
+			Vous avez mal placé la fente de ces miches
+			Au milieu la
+			césure, -entre les hémistiches !
+			A un autre, lui montrant un pâté
+			inachevé.
+			A ce palais de croûte, il faut, vous, mettre un toit...
+			A un
+			jeune apprenti, qui, assis par terre, embroche des
+			volailles.
+			Et toi,
+			sur cette broche interminable, toi,
+			Le modeste poulet et la dinde
+			superbe,
+			Alterne-les, mon fils, comme le vieux Malherbe
+			Alternait les
+			grands vers avec les plus petits,
+			Et fais tourner au feu des strophes
+			de rôtis !</texte>
+	</replique>
+	<replique>
+		<role>UN AUTRE APPRENTI</role>
+		<attitude>s'avançant avec un plateau recouvert
+			d'une assiette
+		</attitude>
+		<texte>Maître, en pensant à vous, dans le four, j'ai fait cuire
+			Ceci, qui vous plaira, je l'espère.</texte>
+		<attitude>Il découvre un plateau, on voit une grande lyre de
+			pâtisserie.</attitude>
+	</replique>
+	<replique>
+		<role>RAGUENEAU</role>
+		<attitude>ébloui</attitude>
+		<texte>Une lyre !</texte>
+	</replique>
+	<replique>
+		<role>L'APPRENTI</role>
+		<texte>En pâte de brioche</texte>
+	</replique>
+	<replique>
+		<role>RAGUENEAU</role>
+		<attitude>ému</attitude>
+		<texte>Avec des fruits confits !</texte>
+	</replique>
+	<replique>
+		<role>L'APPRENTI</role>
+		<texte>Et les cordes, voyez, en sucre je les fis.</texte>
+	</replique>
+	<replique>
+		<role>BOSSUT</role>
+		<attitude>lourd</attitude>
+		<texte>ta gueule</texte>
+	</replique>
+	<replique>
+		<role>RAGUENEAU</role>
+		<attitude> lui donnant de l'argent</attitude>
+		<texte>Va boire à ma santé ! </texte>
+		<attitude>Lise qui entre</attitude>
+		<texte>Chut ! ma femme ! Circule,
+			Et cache cet argent ! </texte>
+		<attitude>Lise, lui montrant la lyre d'un air gêné.</attitude>
+		<texte>C''est beau ?</texte>
+	</replique>
+	<replique>
+		<role>LISE</role>
+		<texte>C'est ridicule !</texte>
+		<attitude>Elle pose sur le comptoir une pile de sacs en papier.
+		</attitude>
+	</replique>
+	<replique>
+		<role>RAGUENEAU</role>
+		<texte>Des sacs ?... Bon. Merci.</texte>
+		<attitude>Il les regarde.</attitude>
+		<texte>Ciel ! Mes livres vénérés !
+			Les vers de mes amis ! déchirés
+			! démembrés !
+			Pour en faire des sacs à mettre des croquantes...
+			Ah !
+			vous renouvelez Orphée et les bacchantes !
+			</texte>
+	</replique>
+	<replique>
+		<role>LISE</role>
+		<attitude>sèchement</attitude>
+		<texte>Et n'ai-je pas le droit d'utiliser vraiment
+			Ce que laissent
+			ici, pour unique paiement,
+			Vos méchants écriveurs de lignes inégales !
+		</texte>
+	</replique>
+	<replique>
+		<role>RAGUENEAU</role>
+		<texte>Fourmi !... n'insulte pas ces divines cigales !</texte>
+	</replique>
+	<replique>
+		<role>LISE</role>
+		<texte>Avant de fréquenter ces gens-là, mon ami,
+			Vous ne
+			m'appeliez pas bacchante, -ni fourmi !</texte>
+	</replique>
+	<replique>
+		<role>RAGUENEAU</role>
+		<texte>Avec des vers, faire cela !</texte>
+	</replique>
+	<replique>
+		<role>LISE</role>
+		<texte>Pas autre chose.</texte>
+	</replique>
+	<replique>
+		<role>RAGUENEAU</role>
+		<texte>Que faites-vous, alors, madame, avec la prose ? </texte>
+	</replique>
+</scene>

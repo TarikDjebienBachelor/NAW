@@ -1,0 +1,73 @@
+
+import java.io.*;
+import org.w3c.dom.*;  
+import javax.xml.parsers.*; 
+
+public class ExpMath2 {  
+	  
+	  public static double evaluate(Element e, Element rac){ 
+		  double v=0; 
+		  //si c'est un opérateur on prend ces deux fils et on évalue ces fils récursivement
+		  if (e.getTagName().equals("op")){   
+			  NodeList operande = e.getChildNodes() ; 
+			  double v1 = evaluate( (Element) operande.item(0) , rac );
+			  double v2 = evaluate ((Element) operande.item(1),rac) ; 
+			  if (e.getAttribute("symbole").equals("+"))
+				  return v1+v2 ;
+			  if (e.getAttribute("symbole").equals("-"))
+				  return v1-v2 ;
+			  if (e.getAttribute("symbole").equals("*"))
+				  return v1*v2 ;
+			  if (e.getAttribute("symbole").equals("/"))
+				  return v1/v2 ;
+			  return 0 ;
+		  }
+		  
+		  
+		  
+		  //si c'est une variable on cherche sa valeur dans les noeuds d'attributs "const" 
+		  if (e.getTagName().equals("var")){ 
+			  String nom = e.getAttribute("nom") ; 
+			  NodeList consts = rac.getElementsByTagName("const");
+			   for (int i=0; i<consts.getLength();i++){
+				   
+			   }   
+				   
+		  } 
+		  return v;
+	  }
+  
+	  public static void main(String[] args) throws Exception
+	  {  
+	  DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); 
+	  dbf.setCoalescing(false);
+	  dbf.setIgnoringElementContentWhitespace(true); 
+	  DocumentBuilder db = dbf.newDocumentBuilder(); 
+	  Document document = db.parse(new File("c:/expMath.xml")); 
+	  Element rac = document.getDocumentElement(); 
+	  Attr a = null; 
+	  System.out.println(rac.getTagName());
+	  NodeList lesEx = rac.getElementsByTagName("exp"); 
+	  for (int i=0; i<lesEx.getLength(); i++) 
+	  {     String n = ((Element)lesEx.item(i)).getAttribute("nom");
+		    Element ex = (Element) lesEx.item(i).getFirstChild(); 
+	        System.out.println(n+":="+evaluate(ex, rac));	        
+	  }
+	  }	
+	}
+
+
+
+
+if  (e.getTagName().equals("var"))  
+{  String n = e.getAttribute("nom"); 
+   NodeList consts = rac.getElementsByTagName("const"); 
+   for (int i=0; i<consts.getLength();i++)
+   { Element c = (Element) consts.item(i); 
+     String nc = c.getAttribute("nom"); 
+     if (nc.equals(n)) 
+         return  Integer.parseInt(c.getAttribute("valeur"));       
+   }  
+} 
+return 0;
+}

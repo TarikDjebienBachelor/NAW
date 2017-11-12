@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cuisiner SYSTEM "C:\Documents and Settings\rakotobe\Bureau\dtd1.dtd">
+<cuisiner>
+	<asso_cat>
+		<categorie>maCategorie1</categorie>
+		
+		<association>
+			<plat> monPlat1</plat>
+		
+			<vin region="nord"> monVin1 </vin>
+			<vin couleur="blanc" region="sud"> monVin2 </vin>
+		</association>
+	</asso_cat>
+</cuisiner>

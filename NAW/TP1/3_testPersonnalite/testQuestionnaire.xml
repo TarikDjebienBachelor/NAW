@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testDePersonnalite SYSTEM "C:\Users\rsitrakaeric\Desktop\testDtd.dtd">
+<testDePersonnalite>
+	<titre> Tes atouts pour la rentree </titre>
+	<accroche> Mieux vaut avoir de bonnes cartes en main pour reussir la rentree scolaire </accroche>
+	<questionnaire>
+	
+		<questions id="1">
+			<intituleQuestion>Devoir de vacances </intituleQuestion>
+			<reponses id="11" symboleIndicateur="triangle">Tu les as faits regulieremt et ac serieux car tu en avais besoin </reponses>
+			<reponses id="12" symboleIndicateur="carre">Tu as travaille un peu de tps en tps pr te remettre ds le bain</reponses>
+			<reponses id="13" symboleIndicateur="rond">Tu n as revu aucun cours </reponses>
+		</questions>
+		
+		<questions id="2">
+			<intituleQuestion>La semaine derniere (tu peux cocher plusieurs reponses) </intituleQuestion>
+			<reponses id="21" symboleIndicateur="carre">Tu as achete de nouvelles fringues ac tes copains (copines) </reponses>
+			<reponses id="22" symboleIndicateur="rond">Tu as profite au maximum de tes derniers jours de vacances</reponses>
+			<reponses id="23" symboleIndicateur="triangle">Tu as range et nettoye ta chambre </reponses>
+		</questions>
+		
+		<questions id="3">
+			<intituleQuestion>Cette annee tu esperes surtout</intituleQuestion>
+			<reponses id="31"  symboleIndicateur="rond">Etre dans une classe tres sympa</reponses>
+			<reponses id="32" symboleIndicateur="triangle">Bien travailler</reponses>
+			<reponses id="33" symboleIndicateur="carre">Avoir de bons profs</reponses>
+		</questions>
+		
+		<questions id="4">
+			<intituleQuestion>Le test qui te brancherait le plus </intituleQuestion>
+			<reponses id="41" symboleIndicateur="triangle">As tu une memoire visuelle ou auditive?</reponses>
+			<reponses id="42" symboleIndicateur="rond">Quel copain es tu ?</reponses>
+			<reponses id="43" symboleIndicateur="carre">Sais tu saisir ta chance ?</reponses>
+		</questions>
+		
+		<questions id="5">
+			<intituleQuestion>Ta devise</intituleQuestion>
+			<reponses id="51" symboleIndicateur="carre">Rien ne sert de courir il faut partir a point </reponses>
+			<reponses id="52" symboleIndicateur="triangle">Quand on veut, on peut</reponses>
+			<reponses id="53" symboleIndicateur="rond">Plus on est de fou, plus on rit </reponses>
+		</questions>
+
+		<questions id="6">
+			<intituleQuestion>Quand tu es stresse, pour te detendre </intituleQuestion>
+			<reponses id="61" symboleIndicateur="rond">Tu vas voir des amis </reponses>
+			<reponses id="62" symboleIndicateur="carre">Tu ecoutes de la musique, allonge sur ton lit</reponses>
+			<reponses id="63" symboleIndicateur="triangle">Tu lis (un bd, roman...) </reponses>
+		</questions>
+		
+		<questions id="7">
+			<intituleQuestion>Pour te mettre en forme le jour de la rentree, rien de tel </intituleQuestion>
+			<reponses id="71" symboleIndicateur="triangle">Que quelques mouvements de gym et une bonne douche </reponses>
+			<reponses id="72" symboleIndicateur="carre">qu'un petit dejeuner equilibre</reponses>
+			<reponses id="73" symboleIndicateur="rond">qu'un texto de ton amoureux</reponses>
+		</questions>
+		
+		<questions id="8">
+			<intituleQuestion>Ta reaction si, par hasard, ta premiere note de rentree etait mauvaise</intituleQuestion>
+			<reponses id="81" symboleIndicateur="carre">Je dois en comprendre la raison</reponses>
+			<reponses id="82" symboleIndicateur="rond">Il ne faut pas que j'en fasse un drame</reponses>
+			<reponses id="83" symboleIndicateur="triangle">La prochaine devra etre la meilleure </reponses>
+		</questions>
+		
+	</questionnaire>
+</testDePersonnalite>

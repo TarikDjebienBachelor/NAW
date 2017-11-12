@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT asso_cat (categorie , association*)>
+<!ELEMENT plat (#PCDATA)>
+<!ELEMENT vin (#PCDATA)>
+<!ATTLIST vin couleur CDATA #IMPLIED region CDATA #REQUIRED>
+<!ELEMENT categorie (#PCDATA)>
+<!ELEMENT association (plat , vin+)>
+<!ELEMENT cuisiner (asso_cat*)>

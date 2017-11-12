@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalogue>
+<article nom="peigne">
+<prix unite="euro">10</prix>
+</article>
+<article nom="brosse">
+<prix unite="dollar">5</prix>
+</article>
+<article nom="shampoing">
+<prix>4</prix>
+</article>
+<article nom="laque">
+<prix unite="yen">9</prix>
+</article>
+</catalogue>

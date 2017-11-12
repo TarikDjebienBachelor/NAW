@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!ELEMENT formules (constantes,exps)>
+
+<!ELEMENT constantes (const*)>
+<!ELEMENT const (#PCDATA) >
+
+<!ELEMENT exps (exp*) >
+<!ELEMENT exp (op*) >
+<!ELEMENT op ( var | op )* >
+<!ELEMENT var (#PCDATA) >
+
+<!ATTLIST const  valeur CDATA #REQUIRED nom CDATA #REQUIRED >
+<!ATTLIST exp nom CDATA #REQUIRED >
+<!ATTLIST op symbole CDATA #REQUIRED >
+<!ATTLIST var nom CDATA #REQUIRED >

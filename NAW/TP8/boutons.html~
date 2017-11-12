@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+
+
+ <script type="text/javascript"> 
+    <!-- 
+  function ramenecontenu(number){
+      var requete = new XMLHttpRequest();
+
+	if(number == 1){ 	
+	  requete.open("GET","contenu1.html",false);
+	  requete.send(null); 	    	
+	  var contenu = requete.responseText;	
+	}
+	if(number == 2){
+	  requete.open("GET","contenu2.html",false);
+	  requete.send(null);   
+	  var contenu = requete.responseText;
+	}
+	if(number == 3){
+	  requete.open("GET","contenu3.html",false);
+	  requete.send(null);   
+	  var contenu = requete.responseText;
+	}
+	if(number == 4){
+	  requete.open("GET","contenu4.html",false);
+	  requete.send(null);  
+	  var contenu = requete.responseText; 
+	} 
+      var resultat = document.getElementById ("resultat");
+      if (contenu && resultat)
+	resultat.innerHTML = contenu;
+	resultat.style.color="Red";
+    }
+    -->
+    </script>
+  </head>
+
+
+
+
+  <body>
+  <h2> Cliquez sur un bouton</h2>
+  <input type="button" value="Bouton1" onclick="ramenecontenu(1)"> 
+  <input type="button" value="Bouton2" onclick="ramenecontenu(2)"> 
+  <input type="button" value="Bouton3" onclick="ramenecontenu(3)"> 
+  <input type="button" value="Bouton4" onclick="ramenecontenu(4)"> 
+  <div id="resultat"></div>
+  </body>
+
+</html>
+

@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1295541886588
+executed,command,org.eclipse.ui.ide,3.5.0.I20090525-2000,"org.eclipse.ui.edit.text.openLocalFile",1295541886588
+started,bundle,org.eclipse.debug.ui,3.5.0.v20090603,"org.eclipse.debug.ui",1295541889760
+started,bundle,org.eclipse.wst.server.core,1.1.101.v20090515,"org.eclipse.wst.server.core",1295541891213
+started,bundle,org.eclipse.wst.server.ui,1.1.102.v20090515,"org.eclipse.wst.server.ui",1295541891244
+started,bundle,org.eclipse.ant.ui,3.4.0.v20090520,"org.eclipse.ant.ui",1295541891275
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1295541891322
+started,bundle,org.eclipse.jdt.debug,3.5.0.v20090526,"org.eclipse.jdt.debug",1295541891385
+started,bundle,org.eclipse.jdt.debug.ui,3.4.0.v20090527,"org.eclipse.jdt.debug.ui",1295541891853
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1295541892838
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1295541894088
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1295541895353
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1295541896650
+closed,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1295541896650
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1295541897900
+closed,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1295541897900
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1295541899056
+closed,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1295541899056
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1295541899791
+closed,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1295541899791
+activated,view,org.eclipse.ui.navigator.resources,3.4.0.I20090525-2000,"org.eclipse.ui.navigator.ProjectExplorer",1295541900556
+closed,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1295541900556
+error,log,,,"Internal Error",1295541910337
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1295541912696
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1295541916727

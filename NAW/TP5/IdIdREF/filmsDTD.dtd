@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!ELEMENT videotheque (categorie*)>
+<!ELEMENT categorie (film*)>
+<!ELEMENT film (titre,acteur*,realisateur+)>
+<!ELEMENT titre (#PCDATA)>
+<!ELEMENT acteur (#PCDATA)>
+<!ELEMENT realisateur (#PCDATA)>
+
+<!ATTLIST categorie nom CDATA #REQUIRED> 
+<!ATTLIST film id CDATA #REQUIRED annee CDATA #REQUIRED duree CDATA #REQUIRED  > 
+<!ATTLIST acteur  nom CDATA #REQUIRED prenom CDATA #REQUIRED  > 
+<!ATTLIST realisateur nom CDATA #REQUIRED prenom CDATA #REQUIRED  > 

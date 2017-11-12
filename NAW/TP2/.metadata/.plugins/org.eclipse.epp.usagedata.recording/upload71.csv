@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+executed,command,org.eclipse.ui.workbench.texteditor,3.5.0.v20090603,"org.eclipse.ui.edit.text.deletePreviousWord",1296661352207
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1296661365910
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1296661372785
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1296661379269
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1296661387472
+activated,editor,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.CompilationUnitEditor",1296661406128
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.edit.copy",1296661414331
+executed,command,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.file.save",1296661421393
+activated,view,org.eclipse.ui.console,3.4.0.v20090513,"org.eclipse.ui.console.ConsoleView",1296661425315
+error,log,,,"Unhandled event loop exception",1296661432361
+error,log,,,"Unhandled event loop exception",1296661432752
+error,log,,,"Unhandled event loop exception",1296661433768
+error,log,,,"Unhandled event loop exception",1296661434377
+error,log,,,"Unhandled event loop exception",1296661434799
+error,log,,,"Unhandled event loop exception",1296661435408
+error,log,,,"Unhandled event loop exception",1296661436002
+error,log,,,"Unhandled event loop exception",1296661436267
+error,log,,,"Unhandled event loop exception",1296661436705
+error,log,,,"Unhandled event loop exception",1296661436986
+error,log,,,"Unhandled event loop exception",1296661439096
+error,log,,,"Unhandled event loop exception",1296661439377
+error,log,,,"Unhandled event loop exception",1296661439658
+error,log,,,"Unhandled event loop exception",1296661439939
+error,log,,,"Unhandled event loop exception",1296661440314
+error,log,,,"Unhandled event loop exception",1296661440595

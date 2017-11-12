@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<videotheque1>
+	<film titre="Matrix" categorie="Fantastique"/>
+	<film titre="Charlie et la chocolaterie" categorie="Comédie"/>
+	<film titre="Les poupées russes" categorie="Comédie"/>
+	<film titre="La cloche a sonné" categorie="Comédie"/>
+	<film titre="Podium" categorie="Comédie"/>
+	<film titre="Bruce Tout-Puissant" categorie="Comédie"/>
+	<film titre="Alexandre" categorie="Historique"/>
+	<film titre="Gladiator" categorie="Historique"/>
+	<film titre="La liste de Schindler" categorie="Historique"/>
+	<film titre="L'esquive" categorie="Drame"/>
+	<film titre="Un long dimanche de fiançailles" categorie="Drame"/>
+	<film titre="le fabuleux destin d'Amélie Poulain" categorie="Drame"/>
+	<film titre="les égarés" categorie="Drame"/>
+	<film titre="Good Bye Lenin" categorie="Drame"/>
+	<film titre="Les invasions barbares" categorie="Drame"/>
+	<film titre="Monsieur Batignole" categorie="Drame"/>
+	<film titre="Les petites couleurs" categorie="Drame"/>
+	<film titre="Le pianiste" categorie="Drame"/>
+	<film titre="La guerre des mondes" categorie="Action"/>
+	<film titre="Mr et Mme Smith" categorie="Action"/>
+	<film titre="L'île" categorie="Action"/>
+	<film titre="Ocean's eleven" categorie="Action"/>
+	<film titre="Traffic" categorie="Policier"/>
+	<film titre="Da Vinci Code" categorie="Esoterisme"/>
+</videotheque1>

@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<questionnaires>
+   <questionnaire>
+      <titre>TestDeTarik</titre>
+      <description>
+         <interpretation indicateur="carre">retourne en initprog</interpretation>
+         <interpretation indicateur="triangle">tu es un SAK du JAVA</interpretation>
+         <interpretation indicateur="rond">tu dois encore t'entrainer</interpretation>
+      </description>
+      <questions>
+         <q>
+            <enonce>Quel classe herite de Map ?</enonce>
+            <propositions>
+               <reponse idref="rond">List</reponse>
+               <reponse idref="triangle">HashMap</reponse>
+               <reponse idref="carre">Integer</reponse>
+            </propositions>
+         </q>
+         <q>
+            <enonce>Que fait un thread ?</enonce>
+            <propositions>
+               <reponse idref="carre">il fait du buisness</reponse>
+               <reponse idref="triangle">il partage les ressources systeme pour un processus</reponse>
+               <reponse idref="rond">il permet de faire des choses en partage</reponse>
+            </propositions>
+         </q>
+         <q>
+            <enonce>que veut dire XML ?</enonce>
+            <propositions>
+               <reponse idref="carre">X MEN Law</reponse>
+               <reponse idref="triangle">eXtensible Markup Language</reponse>
+               <reponse idref="rond">je sais pas</reponse>
+            </propositions>
+         </q>
+      </questions>
+   </questionnaire>
+</questionnaires>

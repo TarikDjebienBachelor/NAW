@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CDTHEQUE SYSTEM "cdtheque.dtd">
+<CDTHEQUE>
+	<CD>
+		<interprete>Ferrat</interprete>
+		<titreA>Ma France</titreA>
+		<annee>2001</annee>
+		<editeur>Label Barclay</editeur>
+		<chanson>
+			<titreC>La Fête aux Copains</titreC>
+			<auteur>Georges Coulonges</auteur>
+			<compositeur>Ferrat</compositeur>
+		</chanson>
+		<chanson>
+			<titreC>Les nomades</titreC>
+			<auteur>Michelle Senlis</auteur>
+			<compositeur>Ferrat</compositeur>
+		</chanson>
+		<chanson>
+			<titreC>Nuit et Brouillard</titreC>
+			<auteur>Ferrat</auteur>
+			<compositeur>Ferrat</compositeur>
+		</chanson>
+		<chanson>
+			<titreC>J'entends</titreC>
+			<auteur>Aragon</auteur>
+			<compositeur>Ferrat</compositeur>
+		</chanson>
+		<chanson>
+			<titreC>La Montagne</titreC>
+			<auteur>Ferrat</auteur>
+			<compositeur>Ferrat</compositeur>
+		</chanson>
+		<chanson>
+			<titreC>Ma France</titreC>
+		</chanson>
+	</CD>
+	<CD>
+		<interprete>Ferrat</interprete>
+		<titreA>Ferrat: 1967-1969</titreA>
+		<annee>1993</annee>
+		<editeur/>
+		<chanson>
+			<titreC>Pauvres Petits C..</titreC>
+			<auteur>Ferrat</auteur>
+		</chanson>
+		<chanson>
+			<titreC>Ma France</titreC>
+		</chanson>
+		<chanson>
+			<titreC>Indien</titreC>
+			<auteur>Ferrat</auteur>
+		</chanson>
+		<chanson>
+			<titreC>Les poètes</titreC>
+			<auteur>Aragon</auteur>
+		</chanson>
+	</CD>
+	<CD>
+		<interprete>Aubret</interprete>
+		<titreA>Aubret chante Ferrat</titreA>
+		<annee>1993</annee>
+		<editeur/>
+		<chanson>
+			<titreC>Nuit et Brouillard</titreC>
+			<auteur>Ferrat</auteur>
+			<compositeur>Ferrat</compositeur>
+		</chanson>
+	</CD>
+	<CD>
+		<interprete>Francesca Solleville</interprete>
+		<titreA>Venge la Vie</titreA>
+		<annee>1993</annee>
+		<editeur/>
+		<chanson>
+			<titreC>Un jour, un jour</titreC>
+			<auteur>Ferrrat</auteur>
+		</chanson>
+		<chanson>
+			<titreC>Nuit et Brouillard</titreC>
+			<auteur>Ferrat</auteur>
+			<compositeur>Ferrat</compositeur>
+		</chanson>
+		<chanson>
+			<titreC>J'entends</titreC>
+			<auteur>Aragon</auteur>
+			<compositeur>Ferrat</compositeur>
+		</chanson>
+		<chanson>
+			<titreC>Que Serais-Je Sans Toi</titreC>
+			<auteur>Aragon</auteur>
+		</chanson>
+		<chanson>
+			<titreC>le temps de vivre</titreC>
+			<auteur>Solleville</auteur>
+			<compositeur>Solleville</compositeur>
+		</chanson>
+	</CD>
+	<CD>
+		<interprete>Francesca Solleville</interprete>
+		<titreA>Je suis ainsi</titreA>
+		<annee>2005</annee>
+		<editeur></editeur>
+		<chanson>
+			<titreC>Je suis ainsi</titreC>
+		</chanson>
+		<chanson>
+			<titreC>Je ne suis qu'un cri</titreC>
+			<auteur>Ferrat</auteur>
+		</chanson>
+		<chanson>
+			<titreC>une écolière au tableau noir</titreC>
+			<auteur>Solleville</auteur>
+		</chanson>
+	</CD>
+</CDTHEQUE>

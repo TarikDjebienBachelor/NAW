@@ -1,0 +1,130 @@
+import java.io.*;
+import java.util.*;
+import javax.xml.parsers.*;
+
+import org.w3c.dom.*;
+import org.xml.sax.*;
+
+/**
+ * @author rakotobe
+ *
+ */
+
+
+public class AppliTest {
+
+
+	public static void main(String[] args) throws Exception {
+		
+		
+		Map <Integer,String>lesCaracteresInterpretationo = new HashMap<Integer,String>() ; 
+		Map<Integer,String> reponsesLibelleEtIdentifiant = new HashMap <Integer,String>() ; 
+		Map <String , Map<Integer,String>> mesQuestionEtReponses= new HashMap <String , Map<Integer,String>> () ; 
+		  
+		  
+		//notre lecteur de saisie de données
+		LectureClavier lecture = new LectureClavier() ; 
+		
+		
+		//titre 
+		System.out.println("Entrez le titre du test (en String) ");
+		String titre = lecture.lectureString() ; 
+		
+		
+		//nb caracteres etudies : triangle , rond , carre ... 
+		System.out.println("Entrez le nombre de caracteres etudies (en int) : carre, rond, triangle... ");
+		int nbCaracteres = lecture.lectureInt(); 
+		System.out.println("Entrez les identifiants et commentaires associes a chacun des caracteres  ");
+		for (int i = 1 ; i< nbCaracteres ; i ++ ) {
+			System.out.println("Identifiants caracteres (en int) " + i );
+		    int idCaracteres = lecture.lectureInt() ; 
+		    System.out.println("Commentaires caracteres (en String)" + i );
+		    String comsCaracteres  = lecture.lectureString() ; 
+		    lesCaracteresInterpretationo.put(idCaracteres , comsCaracteres ) ; 
+		}
+		
+		
+		//les questions , libelle et identifiants du caractere
+		System.out.println("Entrez le nombre de questions (en int) ");
+		int nbQuestions = lecture.lectureInt(); 
+		System.out.println("Pour chaque question , entrez son libelle");
+		for (int i = 1 ; i< nbQuestions ; i ++ ) {
+			System.out.println("Libelle de la question " + i + "(en String)"  );
+			String libQuestion = lecture.lectureString() ;
+			System.out.println(" L'identifiant du caractere associe a l'item de la reponse a cette question (en int):");
+			int idCaracteres = lecture.lectureInt() ; 
+			System.out.println(" Le libelle du caractere associe a l'item de la reponse a cette question (en String) :");
+			String libCaractereAssocie = lecture.lectureString() ;
+			reponsesLibelleEtIdentifiant.put(idCaracteres, libCaractereAssocie) ; 
+			mesQuestionEtReponses.put(libQuestion, reponsesLibelleEtIdentifiant); 
+		}
+		System.out.println("Le questionnaire est maintenant pret en version XML, merci !! ");
+		
+		
+		//*************************************************************************************************************************//
+		
+		
+		//création du XML maintenant 
+		  DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); 
+		  dbf.setIgnoringElementContentWhitespace(true); 
+		  DocumentBuilder db = dbf.newDocumentBuilder();
+		  Document document = db.parse(new File("E:/NAW/TP2/monTestPsychoXML.xml")); 
+		  
+		  Element racine = document.getDocumentElement();
+		  Element testDePersonnaliteXML,titreXML  ,  X2,X3,Y,Z, plus,fois1,fois2,fois3 , R3 ;
+		 
+		  //testDePersonnalite
+		  testDePersonnaliteXML = document.createElement("testDePersonnalite");
+		  titreXML = document.createElement("titre");
+		  titreXML.setNodeValue(titre); 
+		  
+		  
+		   testDePersonnaliteXML.appendChild(titreXML);
+		  
+		
+		
+		
+		
+		
+		  racine.appendChild(testDePersonnaliteXML);
+		
+		
+		
+		  XMLTools.ecrireXML(document,"E:/NAW/TP2/monTestPsychoXML.xml",null);
+		
+		
+		
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

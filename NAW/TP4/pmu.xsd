@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 rel. 3 (http://www.altova.com) by Delepeleire (Université des Sciences et Technologies de Lille) -->
+<!-- edited with XMLSPY v2004 rel. 4 U (http://www.xmlspy.com) by bossut francis (USTL) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="pmu">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="prix" maxOccurs="unbounded"/>
+				<xs:element ref="cheval" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:key name="pkch">
+			<xs:selector xpath="cheval"/>
+			<xs:field xpath="@nom"/>
+		</xs:key>
+		<xs:keyref name="fkch" refer="pkch">
+			<xs:selector xpath="prix/arrivee/refcheval"/>
+			<xs:field xpath="@nom"/>
+		</xs:keyref>
+		<xs:keyref name="fkpere" refer="pkch">
+			<xs:selector xpath="cheval/pedigree/mere"/>
+			<xs:field xpath="@nom"/>
+		</xs:keyref>
+	</xs:element>
+	<xs:element name="prix">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nom"/>
+				<xs:element name="annee">
+					<xs:simpleType>
+						<xs:restriction base="xs:int">
+							<xs:enumeration value="2005"/>
+							<xs:enumeration value="2006"/>
+							<xs:enumeration value="2007"/>
+							<xs:enumeration value="2004"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="dateprix" type="xs:date"/>
+				<xs:element ref="arrivee" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="nom"/>
+		</xs:complexType>
+		<xs:unique name="chevalUnique">
+			<xs:selector xpath="./arrivee"/>
+			<xs:field xpath="cheval"/>
+		</xs:unique>
+		<xs:unique name="rangUniqye">
+			<xs:selector xpath="./arrivee"/>
+			<xs:field xpath="rang"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="arrivee">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="refcheval">
+					<xs:complexType>
+						<xs:attribute name="nom" type="xs:string" use="required"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="rang">
+					<xs:simpleType>
+						<xs:restriction base="xs:int">
+							<xs:minInclusive value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="cheval">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="proprietaire" type="xs:string" minOccurs="0"/>
+				<xs:element name="entraineur" type="xs:string" minOccurs="0"/>
+				<xs:element name="pedigree" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="pere" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="name" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="mere" minOccurs="0">
+								<xs:complexType>
+									<xs:attribute name="nom" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="nom" type="xs:string" use="required"/>
+			<xs:attribute name="sexe" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="M"/>
+						<xs:enumeration value="F"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,114 @@
+import java.io.*;
+import java.util.*;
+import javax.xml.parsers.*;
+import org.w3c.dom.*;
+import org.xml.sax.*;
+
+/**
+ * @author rakotobe
+ *
+ */
+
+
+public class AppliTest {
+
+
+	public static void main(String[] args) throws Exception {
+		
+		
+		Map <Integer,String>lesCaracteresInterpretationo = new HashMap<Integer,String>() ; 
+		List<String> lesQuestions = new ArrayList<String>();
+		  
+		  
+		//notre lecteur de saisie de données
+		LectureClavier lecture = new LectureClavier() ; 
+		
+		
+		//titre 
+		System.out.println("Entrez le titre du test (en String) ");
+		String titre = lecture.lectureString() ; 
+		
+		
+		//nb caracteres etudies : triangle , rond , carre ... 
+		System.out.println("Entrez le nombre de caracteres etudies (en int) : carre, rond, triangle... ");
+		int nbCaracteres = lecture.lectureInt(); 
+		System.out.println("Entrez les identifiants et commentaires associes a chacun des caracteres  ");
+		for (int i = 1 ; i< nbCaracteres ; i ++ ) {
+			System.out.println("Identifiants caracteres " + i );
+		    int idCaracteres = lecture.lectureInt() ; 
+		    System.out.println("Commentaires caracteres " + i );
+		    String comsCaracteres  = lecture.lectureString() ; 
+		    lesCaracteresInterpretationo.put(idCaracteres , comsCaracteres ) ; 
+		}
+		
+		
+		//les questions , libelle et identifiants du caractere
+		System.out.println("Entrez le nombre de questions puis le libelle et identifiant du caractere associe a chaque item de la reponse a cette question ");
+		int nbQuestions = lecture.lectureInt(); 
+		System.out.println("Pour chaque question , entrez son libelle");
+		for (int i = 1 ; i< nbQuestions ; i ++ ) {
+			System.out.println("Libelle de la question " + i );
+			String libQuestion = lecture.lectureString() ;
+			System.out.println(" L'identifiant du caractere associe a l'item de la reponse a cette question :");
+			int idCaracteres = lecture.lectureInt() ; 
+			System.out.println(" Le libelle du caractere associe a l'item de la reponse a cette question :");
+			String libCaractereAssocie = lecture.lectureString() ;
+		}
+			
+		
+		
+		//création du XML maintenant 
+		
+
+		
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

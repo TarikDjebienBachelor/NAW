@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE cuisiner SYSTEM "exercice1.dtd">
+<cuisiner>
+  <asso_cat>
+    <categorie> categorie1 </categorie>
+    <association>
+      <plat> plat1 </plat>
+      <vin region ="nord"> vin1 </vin>
+      <vin couleur="blanc" region="sud"> vin2 </vin>
+    </association>
+  </asso_cat>
+</cuisiner>

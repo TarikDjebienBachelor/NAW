@@ -1,0 +1,104 @@
+/**
+ * @author rakotobe
+ *
+ */
+
+import java.io.File;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+
+
+public class Expressions {
+
+	public static void main(String[] args) throws Exception {  
+		  Element X1,X2,X3,Y,Z;
+		  
+		  DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); 
+		  dbf.setIgnoringElementContentWhitespace(true); 
+		  DocumentBuilder db = dbf.newDocumentBuilder();
+		  Document document = db.parse(new File("E:/NAW/TP2/expressionsXml.xml")); 
+		  
+		  Element rac = document.getDocumentElement();
+		  
+
+
+
+
+			
+			Element racine = document.createElement("R3");
+
+			(X1 = document.createElement("var")).setAttribute("nom","X1");
+			(X2 = document.createElement("var")).setAttribute("nom","X2");
+			(X3 = document.createElement("var")).setAttribute("nom","X3");
+			(Y = document.createElement("var")).setAttribute("nom","Y");
+			(Z = document.createElement("var")).setAttribute("nom","Z");
+			
+			
+			
+			
+			
+			(art2 = d.createElement("article")).setAttribute("nom","brosse");
+			(art3 = d.createElement("article")).setAttribute("nom","shampoing");		
+			(art4 = d.createElement("article")).setAttribute("nom","laque");		
+			
+			//creation des elements 
+			(prix1 = d.createElement("prix")).setAttribute("unite","euro");
+			(prix2 = d.createElement("prix")).setAttribute("unite","dollar");		
+			prix3 = d.createElement("prix");	
+			(prix4 = d.createElement("prix")).setAttribute("unite","yen");	
+			
+			d.createTextNode("10");
+			d.createTextNode("5");
+			d.createTextNode("4");
+			d.createTextNode("9");
+					
+			
+			//on remplit leurs contenus 
+			prix1.appendChild(d.createTextNode("10"));
+			prix2.appendChild(d.createTextNode("5"));
+			prix3.appendChild(d.createTextNode("4"));
+			prix4.appendChild(d.createTextNode("9"));
+			
+			
+			
+			//on cree les relations d'arborescence
+			//pour la racine
+			d.appendChild(racine) ; 
+			//les articles
+			racine.appendChild(art1);
+			racine.appendChild(art2);
+			racine.appendChild(art3);
+			racine.appendChild(art4);
+			//et les prix 
+			art1.appendChild(prix1);
+			art2.appendChild(prix2);
+			art3.appendChild(prix3);
+			art4.appendChild(prix4);
+
+		  
+		  
+		    XMLTools.ecrireXML(document,"E:/expressionsModifie.xml",null);
+	  }
+	  
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Mandats etablissement="petite ville" exercice="2005">
+<Mandat date="20/12/2005" numero="101">
+<ligne>
+<libelle>Cle USB</libelle>
+<montant>60</montant>
+</ligne>
+</Mandat>
+<Mandat numero="102">
+<ligne>pile</ligne>
+<montant>3</montant>
+</Mandat>
+</Mandats>

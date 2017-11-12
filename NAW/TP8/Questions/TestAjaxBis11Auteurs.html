@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html  xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Enter the title of your HTML document here</title>
+      <script type="text/javascript" language="javascript">
+      <!--
+      
+      function handleHttpResponse() {
+         if(xhr.readyState == 4 && xhr.status == 200) {
+        /* xhr.responseXML permet d'obtenir le fichier XML
+           xhr.responseText aurait retourn� le fichier sous format texte */
+           response     = xhr.responseXML.documentElement;
+           var auteurs    = response.getElementsByTagName("auteur");
+          var html     = "";
+        /* Pr�sentation HTML de la liste des DVD */
+        /* Nombre de DVD */
+	count        = auteurs.length;
+	html += '<h1> Les auteurs </h1>';
+        for(i = 0; i < count; i++){ 
+           html += '<div>' +  auteurs[i].getAttribute("nom") + '</div>';
+          } 
+            html += '</div>';  
+           document.getElementById('content').innerHTML += html;  
+        } 
+          
+       }  
+     -->
+      </script>
+     </head>
+   <body>
+           
+           <div id="content"></div>
+
+           <div od="msg"></div>
+      <script type="text/javascript" language="javascript"> 
+      <!-- 
+       var xhr = new XMLHttpRequest(); 
+       xhr.onreadystatechange = handleHttpResponse;
+       var url = "auteurs.xml";
+       xhr.open("GET", url,false );
+       xhr.send(null); 
+     
+      -->
+      </script>
+   </body>
+</html>

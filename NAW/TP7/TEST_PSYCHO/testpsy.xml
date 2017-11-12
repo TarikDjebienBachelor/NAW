@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsltestpsyV2.xsl"?>
+<catalogue>
+	<enquete author="Francis Bossut">
+		<intro>
+			<titre>Rentrée scolaire</titre>
+			<presentation>Mieux vaut avoir des bonnes cartes en main pour réussir sa rentrée scolaire </presentation>
+		</intro>
+		<question>
+			<libelle>devoirs de vacances</libelle>
+			<option idindic="triangle">tu les as faits régulierment</option>
+			<option idindic="carre">tu as travaillé un peu de temps en temps</option>
+			<option idindic="rond">tu n''as revu aucun cours</option>
+		</question>
+		<question>
+			<libelle>cette année, tu espères</libelle>
+			<option idindic="rond">être dans une classe sympa</option>
+			<option idindic="triangle">bien travailler</option>
+			<option idindic="carre">avoir de bons profs</option>
+		</question>
+		<question>
+			<libelle>ta devise</libelle>
+			<option idindic="rond">plus on est de fous, plus on s'amuse</option>
+			<option idindic="triangle">quand on veut, on peut</option>
+			<option idindic="carre">rien ne sert de courir, il faut partir à point</option>
+		</question>
+		<indicateur idindic="triangle">travailleur acharné</indicateur>
+		<indicateur idindic="carre">travailleur moyen</indicateur>
+		<indicateur idindic="rond">cancre</indicateur>
+	</enquete>
+</catalogue>

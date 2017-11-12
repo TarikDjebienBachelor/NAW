@@ -1,0 +1,199 @@
+import java.io.*;
+import java.util.*;
+import javax.xml.parsers.*;
+import org.w3c.dom.*;
+import org.xml.sax.*;
+
+/**
+ * @author rakotobe
+ *
+ */
+
+
+public class AppliTest {
+	
+	
+	private LectureClavier lecture = new LectureClavier() ; 
+	private String titre ;
+	private String accroche ;
+	// un caractere possede un identifiant correspondant a un symbole et un libelle 
+	private Map <Integer,String> interpretationCaracteres = new HashMap<Integer,String>() ; 
+	private List <QuestionReponse> questionsEtChoix = new ArrayList <QuestionReponse> () ; 
+
+	
+	/**Méthode qui permet de fixer le titre de notre questionnaire*/
+	public void setTitle(){
+		System.out.println("****************** TITRE (en String)****************** = ");
+		String t = lecture.lectureString() ; 
+		this.titre = t ; 
+	}
+	
+	
+	
+	/**Méthode qui permet de fixer l'accroche de notre questionnaire */
+	public void setAccroche(){
+		System.out.println("****************** ACCROCHE (en String)****************** = ");
+		String accroche = lecture.lectureString() ; 
+		this.accroche = accroche ; 
+	}
+	
+	
+	
+	/**Méthode qui permet de fixer le nombre de caracteres : par exemple vous avez un caractere consciencieux, ou vous avez un sens de la priorite ... */
+	public void setNbCaracteresEtudies(){
+		System.out.println("****************** LES CARACTERES (consciencieux, independant...) ******************");
+		System.out.println("Combien de caracteres ?");
+		int nbCaracteres = lecture.lectureInt(); 
+		System.out.println("Identifiants et commentaires associes a chacun des caracteres");
+		for (int i = 1 ; i<= nbCaracteres ; i ++ ) {
+			System.out.println("Identifiant du caractere n� " + i + " (en int) = ");
+		    int idCaracteres = lecture.lectureInt() ; 
+		    System.out.println("Commentaires du caractere " + i + " (en String) = " );
+		    String comsCaracteres  = lecture.lectureString() ; 
+		    this.interpretationCaracteres.put(idCaracteres , comsCaracteres ) ; 
+		}
+	}
+	
+	
+	
+	/**Méthode qui permet de creer le QCM relatif aux questionnaires */
+	public void setQuestionsReponses(){
+		System.out.println("****************** LES QUESTIONS ****************** = ");
+		//les questions , libelle et identifiants du caractere
+		System.out.println("Combien de questions ? = ");
+		int nbQuestions = lecture.lectureInt(); 
+		System.out.println("****************** LES REPONSES  ****************** = ");
+		for (int i = 1 ; i<= nbQuestions ; i ++ ) {
+			System.out.println(" => Libelle de la question n�" + i + " (en String) = "  );
+			String libQuestion = lecture.lectureString() ;
+			QuestionReponse qr = new QuestionReponse();
+			qr.setIdQuestion(i);
+			qr.setIntituleQuestions(libQuestion);
+			for (Integer j : this.interpretationCaracteres.keySet()){
+				System.out.println(" Libelle correspondant au symbole d'identificateur " + j + " (en String) = "  );
+				String libCaractereAssocie = lecture.lectureString() ;
+				qr.put(j, libCaractereAssocie);
+			}
+			this.questionsEtChoix.add(qr);
+		}
+	}
+	
+	
+	//GETTEURS
+	public LectureClavier getLecture() {return lecture;}
+	public String getTitre() {return titre;}
+	public String getAccroche() {return accroche;}
+	public Map<Integer, String> getInterpretationCaracteres() {return interpretationCaracteres;}
+
+
+	
+	
+	
+	public static void main(String[] args) throws Exception {
+		   
+		AppliTest monGenerateurDeQuestions = new AppliTest(); 
+		monGenerateurDeQuestions.setTitle();
+		monGenerateurDeQuestions.setAccroche();
+		monGenerateurDeQuestions.setNbCaracteresEtudies();
+		monGenerateurDeQuestions.setQuestionsReponses();
+
+		
+		System.out.println("***********************************************************************************"  );
+		System.out.println("**************LE QUESTIONNAIRE EST MAINTENANT PRET EN VERSION XML !! **************");
+		System.out.println("***********************************************************************************"  );
+			
+		
+		//*************************************CREATION DU QUESTIONNAIRE EN VERSION XML *******************************************//
+
+		  DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); 
+		  dbf.setIgnoringElementContentWhitespace(true); 
+		  DocumentBuilder db = dbf.newDocumentBuilder();
+		  Document document = db.parse(new File("../monTestPsychoXML.xml"));
+		  
+		  
+		  Element racine = document.getDocumentElement();
+		  // titre testDePersonnalite
+		  Element testDePersonnaliteXML = document.createElement("testDePersonnalite");
+		  Element titreXML = document.createElement("titre");
+		  titreXML.appendChild(document.createTextNode(monGenerateurDeQuestions.getTitre()));
+		  testDePersonnaliteXML.appendChild(titreXML);
+		  
+		  // accroche testDePersonnalite
+		  Element accrocheXML = document.createElement("accroche");
+		  accrocheXML.appendChild(document.createTextNode(monGenerateurDeQuestions.getAccroche()));
+		  testDePersonnaliteXML.appendChild(accrocheXML);
+		  
+		  
+//			private Map <Integer,String> interpretationCaracteres = new HashMap<Integer,String>() ; 
+//			private HashMap<String,Reponses> questionsReponses = new HashMap<String, Reponses>() ; 
+		  
+		  //questionnaire
+		  Element questionnaire = document.createElement("questionnaire");
+		  int i = 0 ;
+		  //on parcours notre liste de questions
+		  for (QuestionReponse qr : monGenerateurDeQuestions.questionsEtChoix) {
+			  Element questions = document.createElement("questions");
+			  i++;
+			  questions.setAttribute("id", String.valueOf(i) ) ; 
+			  
+			  //pour l'intitule de la question 
+			  Element intituleQuestion = document.createElement("intituleQuestion");
+			  intituleQuestion.appendChild(document.createTextNode(qr.getIntituleQuestions()));
+			  questions.appendChild(intituleQuestion);
+			  
+			  int j=0 ; 
+			  //maintenant pour les reponses correspondantes
+			   for (String v : qr.getQuestionsReponses().values()){
+				Element reponses = document.createElement("reponses");
+				reponses.setAttribute("id", String.valueOf(i*10 + j));
+				reponses.appendChild(document.createTextNode(v));
+			  	questions.appendChild(reponses);
+			  }
+			  questionnaire.appendChild(questions);
+		  }
+		  testDePersonnaliteXML.appendChild(accrocheXML);
+		  testDePersonnaliteXML.appendChild(questionnaire);
+		
+		
+		
+		  racine.appendChild(testDePersonnaliteXML);
+		
+		
+		  XMLTools.ecrireXML(document,"../monTestPsychoXML.xml",null);
+		
+		
+		
+	}
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

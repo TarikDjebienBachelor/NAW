@@ -1,0 +1,158 @@
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import java.io.*;
+import java.util.*;
+import javax.xml.parsers.*;
+import org.w3c.dom.*;
+import java.util.List;
+
+
+
+
+/**Correspond à la fenêtre associée à un questionnaire
+ * @author rsitrakaeric
+ */
+
+public class PanelQuestionnaire{
+
+		
+	public void lancerQuestionnaire(int choix) throws Exception{
+		  DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); 
+		  dbf.setIgnoringElementContentWhitespace(true); 
+		  DocumentBuilder db = dbf.newDocumentBuilder();
+		  Document document = db.parse(new File("../monTestPsychoXML.xml")); 
+		  NodeList lesTitres = document.getElementsByTagName("titre");
+		  Element titre = (Element) lesTitres.item(choix);
+		  Element testDePersonnalite = (Element) titre.getParentNode();
+		  //les fils sont : <testDePersonnalite> , <titre> , <accroche> , <questionnaire>
+		  NodeList fils = testDePersonnalite.getChildNodes() ; 
+		  NodeList questionnaire = fils.item(2).getChildNodes();
+		  
+		  //constructions du questionnaire maintenant
+		  JFrame fenetre;
+	      JPanel questionspanel;
+		  JButton boutonvalider;
+		  questionspanel = new JPanel(new GridLayout(questionnaire.getLength(),1,0,Style.MARGES_EXTERNES));
+		  questionspanel.setBorder(new EmptyBorder(Style.MARGES_EXTERNES,Style.MARGES_EXTERNES,Style.MARGES_EXTERNES,Style.MARGES_EXTERNES));
+		  //pour le titre
+		  fenetre = new JFrame(titre.getNodeValue());
+		  //pour l'accroche
+		  JLabel accroche = new JLabel("'"+fils.item(1).getTextContent()+"'");
+		  JPanel panelAccroche = new JPanel(QuestionPanel.TROIS_LIGNES);
+		  panelAccroche.add(accroche);
+		  
+		  
+		  
+		  
+		  // Pour chaque question du questionnaire choisis, j'ajoute dans une liste le Panel qui lui correspond, et j'insère ce dernier dans le JPanel.
+		  for (int i=0;i<questionnaire.getLength();i++){
+			  Element questions = (Element) questionnaire.item(i); 
+			  QuestionPanel qp = new QuestionPanel(questions);
+				questionspanel.add(qp.getPanel());
+		  }	  
+		  
+			
+		  boutonvalider = new JButton("Valider");
+		  boutonvalider.addActionListener((ActionListener) new ActionValider());
+		  fenetre = new JFrame(titre.getTextContent());
+		  // Je crée le panel contenant le contenu intégral de la fenêtre.
+		  JPanel contenuFenetre = new JPanel(new BorderLayout());
+		  JScrollPane scrollPane = new JScrollPane(questionspanel,ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED,ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+		  scrollPane.setBorder(new EmptyBorder(0,0,0,0));
+		  // Ajout des divers éléments à la fenêtre
+		  contenuFenetre.add(scrollPane,BorderLayout.CENTER);
+		  contenuFenetre.add(boutonvalider,BorderLayout.SOUTH);
+		  // Construction finale de la fenêtre
+		  fenetre.setContentPane(contenuFenetre);
+		  fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		  fenetre.pack();
+		  fenetre.setVisible(true);		
+			
+	}
+	
+	
+	
+	
+		
+		/**
+		 * Valide l'intégralité des réponses données dans le questionnaire.
+		 * @return la psychologie du joueur
+		 */
+		public int valider() {return 0 ;
+//			int resultat = 0;
+//			for (QuestionPanel qp: this.listequestionpanel) {
+//				resultat += qp.valider();
+//			}
+//			return resultat;
+		}
+		
+		
+		
+		
+		/**
+		 * Lance une fenêtre de questionnaire chargé avec le fichier donné en argument
+		 * @param args 
+		 * @throws Exception
+		 */
+		public static void main(String[] args) throws Exception {
+			  PanelQuestionnaire pq = new PanelQuestionnaire() ; 
+			  DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); 
+			  dbf.setIgnoringElementContentWhitespace(true); 
+			  DocumentBuilder db = dbf.newDocumentBuilder();
+			  Document document = db.parse(new File("../monTestPsychoXML.xml")); 
+			  //choix d'un questionnaire ou creation
+			  System.out.println("*****************************VOICI LA LISTE DES QUESTIONNAIRES DISPONIBLES DANS CE FICHIER XML *****************************");
+			  NodeList lesTitres = document.getElementsByTagName("titre"); 
+			  System.out.println("0 => Création d'un nouveau questionnaire " );
+			  for (int i=0;i<lesTitres.getLength();i++){
+				  Element e = (Element) lesTitres.item(i); 
+				  System.out.println(i+1 +" => '" +e.getTextContent()+ "'");
+			  }	  
+			  System.out.println(" Entrez le numero correspondant au test qui vous interesse ");
+			  LectureClavier lecture = new LectureClavier() ; 
+			  int choix = lecture.lectureInt();
+			  if(choix == 0){
+				  AppliTest.main(args);
+			  }else{ 
+				  pq.lancerQuestionnaire(choix-1);  
+			  }
+	    }
+		
+		
+
+		
+		
+		
+		/**
+		 * L'ActionListener correspondant à un clic sur un bouton de validation du questionnaire.
+		 */
+		private class ActionValider implements ActionListener{
+			@Override
+			public void actionPerformed(ActionEvent e) {
+//				int resultat = QuestionnaireFrame.this.valider();
+//				String scoreparfait = "";
+//				if (resultat == QuestionnaireFrame.this.lequestionnaire.scoreMaximal()) {
+//					scoreparfait = "Score parfait ! ";
+//				}
+//				JOptionPane.showMessageDialog(QuestionnaireFrame.this.fenetre,scoreparfait+"Score obtenu : "+resultat+"/"+QuestionnaireFrame.this.lequestionnaire.scoreMaximal());
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+}

@@ -1,0 +1,43 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+/**
+ * 
+ */
+
+/**
+ * @author rakotobe
+ *
+ */
+public class Reponses {
+	
+	
+	//une reponses = identifiant + libelle reponse
+	private Map <Integer,String> mesReponses  ;
+
+	
+	public Reponses(){
+		this.mesReponses = new HashMap<Integer,String>();
+	}
+	
+	
+	public Map<Integer, String> getMesReponses() {
+		return mesReponses;
+	}
+
+	
+	public void setMesReponses(Map<Integer, String> mesReponses) {
+		this.mesReponses = mesReponses;
+	}
+
+
+	@Override
+	public Iterator iterator() {
+		return this.mesReponses.entrySet().iterator();
+	} 
+	
+	
+	
+
+}

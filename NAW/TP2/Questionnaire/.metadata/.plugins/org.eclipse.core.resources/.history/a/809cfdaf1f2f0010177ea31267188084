@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+
+/**
+ * @author rsitrakaeric
+ *
+ */
+public class QuestionReponse {
+
+	private String intituleQuestions ; 
+	private List<String> lesReponsesCorrespondantes ; 
+}

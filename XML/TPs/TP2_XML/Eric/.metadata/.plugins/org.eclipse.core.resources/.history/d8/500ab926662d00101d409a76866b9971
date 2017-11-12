@@ -1,0 +1,80 @@
+/**
+ * @author rakotobe
+ *
+ */
+
+import java.io.File;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+
+
+public class Expressions {
+
+	public static void main(String[] args) throws Exception {  
+		  Element X1,X2,X3,Y,Z , plus, fois1,fois2,fois3 , R3;
+		  
+		  DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance(); 
+		  dbf.setIgnoringElementContentWhitespace(true); 
+		  DocumentBuilder db = dbf.newDocumentBuilder();
+		  Document document = db.parse(new File("E:/NAW/TP2/expressionsXml.xml")); 
+		  
+		  Element racine = document.getDocumentElement();
+		  
+
+
+			//les variables 
+			(X1 = document.createElement("var")).setAttribute("nom","X1");
+			(X2 = document.createElement("var")).setAttribute("nom","X2");
+			(X3 = document.createElement("var")).setAttribute("nom","X3");
+			(Y = document.createElement("var")).setAttribute("nom","Y");
+			(Z = document.createElement("var")).setAttribute("nom","Z");
+			//les operateurs 
+			(plus = document.createElement("op")).setAttribute("symbole","Y");
+			(fois1 = document.createElement("op")).setAttribute("symbole","Z");
+			(fois2 = document.createElement("op")).setAttribute("symbole","Z");
+			(fois3 = document.createElement("op")).setAttribute("symbole","Z");
+			//l'expression
+			(R3 = document.createElement("exp")).setAttribute("nom","R3");
+
+
+			
+			//on cree les relations d'arborescence
+			document.appendChild(racine) ; 
+			//les articles
+			racine.appendChild(art1);
+			racine.appendChild(art2);
+			racine.appendChild(art3);
+			racine.appendChild(art4);
+			//et les prix 
+			art1.appendChild(prix1);
+			art2.appendChild(prix2);
+			art3.appendChild(prix3);
+			art4.appendChild(prix4);
+
+		  
+		  
+		    XMLTools.ecrireXML(document,"E:/expressionsModifie.xml",null);
+	  }
+	  
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
